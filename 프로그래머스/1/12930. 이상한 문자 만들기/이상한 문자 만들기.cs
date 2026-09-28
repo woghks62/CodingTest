@@ -9,14 +9,9 @@ public class Solution {
                 answer += s[i];
             }
             else{
-                if(index % 2 == 0){
-                    answer += (s[i] >= 'A' && s[i] <= 'Z') ? s[i] : (char)(s[i] - 32);
-                    index++;
-                }
-                else{
-                    answer += (s[i] >= 'a' && s[i] <= 'z') ? s[i] : (char)(s[i] + 32);
-                    index++;
-                }
+                if(index % 2 == 0) answer += (s[i] >= 'A' && s[i] <= 'Z') ? s[i] : (char)(s[i] - 32);
+                else answer += (s[i] >= 'a' && s[i] <= 'z') ? s[i] : (char)(s[i] + 32);
+                index++;
             }
         }
         
